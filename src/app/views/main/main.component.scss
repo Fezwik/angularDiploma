@@ -1,0 +1,330 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.main {
+  margin-bottom: 120px;
+
+  .container {
+    .main-carousel {
+      position: relative;
+      margin-bottom: 120px;
+
+      .move-backward {
+        position: absolute;
+        bottom: 236px;
+        left: 11px;
+        z-index: 10;
+        cursor: pointer;
+      }
+
+      .move-forward {
+        position: absolute;
+        bottom: 236px;
+        right: 11px;
+        z-index: 10;
+        cursor: pointer;
+      }
+
+      .carousel-slide {
+        box-sizing: border-box;
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 0 100px 80px;
+
+        .carousel-slide-title {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 12px;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          color: $blue-text-color;
+        }
+
+        .carousel-slide-text {
+          font-family: 'Lora', sans-serif;
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 130%;
+          color: #fff;
+          width: 610px;
+
+
+          span {
+            font-family: 'Lora', sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 130%;
+            color: $blue-text-color;
+          }
+        }
+
+        .carousel-slide-text-additional {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 130%;
+          color: #fff;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          max-width: 456px;
+        }
+
+        .button {
+          margin-top: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .main-services {
+      margin-bottom: 120px;
+
+      .main-services-title {
+        @include head-lora-38;
+        margin-bottom: 40px;
+      }
+
+      .main-services-items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 27px;
+
+        .main-services-item {
+          width: 298px;
+
+          .main-services-item-image {
+            margin-bottom: 15px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .main-services-item-title {
+            font-weight: 500;
+            font-size: 20px;
+            color: $blue-text-color;
+            margin-bottom: 10px;
+          }
+
+          .main-services-item-text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            margin-bottom: 15px;
+            height: 90px;
+            width: 286px;
+          }
+
+          .main-services-item-price {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            color: $blue-text-color;
+
+            .button {
+              margin-left: 21px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .main-aboutUs {
+      display: flex;
+      margin-bottom: 120px;
+      align-items: end;
+
+      .main-aboutUs-info {
+        margin-left: 68px;
+
+        .main-aboutUs-info-title {
+          @include head-lora-38;
+          margin-bottom: 20px;
+        }
+
+        .main-aboutUs-info-text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          color: #1e1a2b;
+          margin-bottom: 40px;
+
+          span {
+            font-weight: 500;
+          }
+        }
+
+        .main-aboutUs-info-advantages {
+          .main-aboutUs-info-advantages-title {
+            font-family: 'Lora', sans-serif;
+            font-weight: 400;
+            font-size: 26px;
+            color: $blue-text-color;
+            margin-bottom: 20px;
+          }
+
+          .main-aboutUs-info-advantages-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+            column-gap: 70px;
+
+            .main-aboutUs-info-advantages-item {
+              display: flex;
+              align-items: center;
+
+              .main-aboutUs-info-advantages-item-text {
+                margin-left: 20px;
+                font-weight: 400;
+                line-height: 130%;
+                color: #1e1a2b;
+
+                span {
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main-popular {
+      margin-bottom: 120px;
+
+      .main-popular-title {
+        @include head-lora-38;
+        margin-bottom: 40px;
+      }
+
+      .main-popular-items {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+
+      .main-to-blog {
+        font-weight: 500;
+        font-size: 20px;
+        color: $blue-text-color;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-decoration: none;
+        line-height: 130%;
+
+        svg {
+          margin-left: 14px;
+        }
+      }
+    }
+
+    .main-feedback {
+      margin-bottom: 120px;
+
+      .main-feedback-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .main-feedback-carousel {
+        position: relative;
+
+        .main-feedback-carousel-arrows {
+          .move-backward {
+            position: absolute;
+            left: -25px;
+            bottom: 130px;
+            cursor: pointer;
+          }
+
+          .move-forward {
+            position: absolute;
+            right: -25px;
+            bottom: 130px;
+            cursor: pointer;
+          }
+        }
+
+        .feedback-carousel-slide {
+          box-sizing: border-box;
+          width: 396px;
+          height: 267px;
+          border: 2px solid $blue-text-color;
+          border-radius: 5px;
+          padding: 30px;
+
+          .feedback-carousel-slide-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .feedback-carousel-slide-info-photo {
+              width: 60px;
+              height: 60px;
+              margin-right: 26px;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .feedback-carousel-slide-info-name {
+              font-weight: 600;
+              font-size: 18px;
+              color: $blue-text-color;
+            }
+          }
+
+          .feedback-carousel-slide-text {
+            font-size: 16px;
+            line-height: 140%;
+          }
+        }
+      }
+    }
+
+    .main-contacts {
+      display: flex;
+
+      .main-contacts-infos {
+        margin-left: 26px;
+
+        .main-contacts-infos-title {
+          @include head-lora-38;
+          margin-bottom: 20px;
+          line-height: 130%;
+        }
+
+        .main-contacts-info {
+          margin-bottom: 20px;
+
+          .main-contacts-info-title {
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+            color: $blue-text-color;
+          }
+
+          .main-contacts-info-text {
+            line-height: 130%;
+            max-width: 501px;
+            text-decoration: none;
+          }
+
+          .main-contacts-info-socials a {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

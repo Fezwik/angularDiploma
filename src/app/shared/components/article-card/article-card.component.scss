@@ -1,0 +1,55 @@
+@import "../../../../assets/styles/variables";
+
+.article-card-item {
+  height: 571px;
+  position: relative;
+  max-width: 292px;
+
+  .article-card-item-image {
+    position: relative;
+    width: 291px;
+    height: 291px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .tag {
+      align-items: center;
+
+      position: absolute;
+      box-sizing: border-box;
+      top: 10px;
+      right: 10px;
+      font-weight: 400;
+      font-size: 11px;
+      text-align: center;
+      color: $blue-text-color;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: white;
+      border-radius: 5px;
+      width: 89px;
+      height: 34px;
+    }
+  }
+
+  .article-card-item-title {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: $blue-text-color;
+  }
+
+  .article-card-item-text {
+    line-height: 130%;
+  }
+
+  a {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    color: $blue-text-color;
+  }
+}

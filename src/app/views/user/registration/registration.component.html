@@ -1,0 +1,39 @@
+<section class="registration" [formGroup]="registrationForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-form-title">
+        Регистрация на сайте
+      </div>
+      <div class="auth-form-inputs">
+        <input class="text-input" type="text"
+               [ngStyle]="{'border-color': registrationForm.get('name')?.invalid
+                 && (registrationForm.get('name')?.dirty || registrationForm.get('name')?.touched) ? 'red' : ''}"
+               placeholder="Ваше имя" formControlName="name">
+        <input class="text-input" type="email"
+               [ngStyle]="{'border-color': registrationForm.get('email')?.invalid
+                 && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched) ? 'red' : ''}"
+               placeholder="Электронная почта" formControlName="email">
+        <input class="text-input" type="password"
+               [ngStyle]="{'border-color': registrationForm.get('password')?.invalid
+                 && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched) ? 'red' : ''}"
+               placeholder="Пароль" formControlName="password">
+        <div>
+          <input type="checkbox" id="agree" formControlName="agree">
+          <label for="agree">
+            Я принимаю <a href="#" target="_blank" routerLink="/agreement" fragment="userAgreement">условия пользовательского соглашения</a> и даю
+            <a href="#" target="_blank" routerLink="/agreement" fragment="personalDataAgreement">согласие на обработку персональных данных.</a>
+          </label>
+        </div>
+      </div>
+      <div class="auth-form-registration">
+        <button class="button button-big" [disabled]="registrationForm.invalid" (click)="signup()">Зарегистрироваться</button>
+        <div class="auth-form-registration-login">Уже есть аккаунт?<a routerLink="/login">Войдите</a></div>
+      </div>
+    </div>
+    <div class="auth-image">
+      <img src="./assets/images/registration.png" alt="Registration photo">
+    </div>
+  </div>
+</section>
+
+
