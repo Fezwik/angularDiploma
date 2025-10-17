@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ArticleType} from "../../../../types/article.type";
-import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,8 +9,18 @@ import {Router} from "@angular/router";
 })
 export class ArticleCardComponent implements OnInit {
 
-  @Input() article!: ArticleType
-  constructor(private router: Router) { }
+  @Input() article: ArticleType
+  constructor() {
+    this.article = {
+      id: '',
+      title: '',
+      description: '',
+      image: '',
+      date: '',
+      category: '',
+      url: ''
+    }
+  }
 
   ngOnInit(): void {
   }

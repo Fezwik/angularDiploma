@@ -14,7 +14,7 @@ const routes: Routes = [
       {path: '', component: MainComponent},
       {
         path: '',
-        loadChildren: ()=> import('./views/user/user.module').then(m => m.UserModule),
+        loadChildren: () => import('./views/user/user.module').then(m => m.UserModule),
         canActivate: [AuthForwardGuard]
       },
       {path: 'blog', component: BlogComponent},
@@ -24,7 +24,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {anchorScrolling: "enabled", scrollPositionRestoration: "enabled"})],
+  imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: "enabled",
+    scrollPositionRestoration: "enabled",
+    onSameUrlNavigation: "reload"
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

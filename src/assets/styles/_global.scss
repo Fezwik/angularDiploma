@@ -60,6 +60,12 @@
   }
 }
 
+.text-input-error {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 .modal-window {
   display: flex;
   border: 1px solid $blue-text-color;
@@ -154,3 +160,31 @@
     color: white;
   }
 }
+
+
+.owl-carousel {
+  position: relative;
+
+    .owl-dots {
+      position: absolute;
+      bottom: 10px;
+      left: calc(50% - 35px);
+
+      .owl-dot {
+
+        &.active {
+          span {
+            background: white;
+            border: 1px solid white;
+          }
+        }
+
+        span {
+          background: transparent;
+          border: 1px solid white;
+        }
+      }
+    }
+}
+
+

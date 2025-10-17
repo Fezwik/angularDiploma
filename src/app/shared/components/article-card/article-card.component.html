@@ -3,7 +3,7 @@
     <div class="tag">{{ article.category }}</div>
   </div>
   <div class="article-card-item-title">
-    {{ article.title }}
+    {{ article.title | shortTitle}}
   </div>
   <div class="article-card-item-text">
     {{ article.description | shortText}}

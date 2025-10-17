@@ -7,12 +7,20 @@
       <div class="auth-form-inputs">
         <input class="text-input" type="email"
                [ngStyle]="{'border-color': loginForm.get('email')?.invalid
-                 && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) ? 'red' : ''}"
+                 && (loginForm.get('email')?.dirty && loginForm.get('email')?.touched) ? 'red' : ''}"
                placeholder="Электронная почта" formControlName="email">
+        <p class="text-input-error" *ngIf="loginForm.get('email')?.invalid
+                 && (loginForm.get('email')?.dirty && loginForm.get('email')?.touched)">
+          Введите корректный email
+        </p>
         <input class="text-input" type="password"
                [ngStyle]="{'border-color': loginForm.get('password')?.invalid
-                 && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) ? 'red' : ''}"
+                 && (loginForm.get('password')?.dirty && loginForm.get('password')?.touched) ? 'red' : ''}"
                placeholder="Пароль" formControlName="password">
+        <p class="text-input-error" *ngIf="loginForm.get('password')?.invalid
+                 && (loginForm.get('password')?.dirty && loginForm.get('password')?.touched)">
+          Введите пароль
+        </p>
         <div><input type="checkbox" id="rememberMe" formControlName="rememberMe"><label for="rememberMe">Запомнить меня</label></div>
       </div>
       <div class="auth-form-login">

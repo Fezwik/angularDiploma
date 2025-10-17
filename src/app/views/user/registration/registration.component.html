@@ -7,16 +7,28 @@
       <div class="auth-form-inputs">
         <input class="text-input" type="text"
                [ngStyle]="{'border-color': registrationForm.get('name')?.invalid
-                 && (registrationForm.get('name')?.dirty || registrationForm.get('name')?.touched) ? 'red' : ''}"
+                 && (registrationForm.get('name')?.dirty && registrationForm.get('name')?.touched) ? 'red' : ''}"
                placeholder="Ваше имя" formControlName="name">
+        <p class="text-input-error" *ngIf="registrationForm.get('name')?.invalid
+                 && (registrationForm.get('name')?.dirty && registrationForm.get('name')?.touched)">
+          Имя должно состоять из русских букв и не быть пустым
+        </p>
         <input class="text-input" type="email"
                [ngStyle]="{'border-color': registrationForm.get('email')?.invalid
-                 && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched) ? 'red' : ''}"
+                 && (registrationForm.get('email')?.dirty && registrationForm.get('email')?.touched) ? 'red' : ''}"
                placeholder="Электронная почта" formControlName="email">
+        <p class="text-input-error" *ngIf="registrationForm.get('email')?.invalid
+                 && (registrationForm.get('email')?.dirty && registrationForm.get('email')?.touched)">
+          Введите корректный email
+        </p>
         <input class="text-input" type="password"
                [ngStyle]="{'border-color': registrationForm.get('password')?.invalid
-                 && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched) ? 'red' : ''}"
+                 && (registrationForm.get('password')?.dirty && registrationForm.get('password')?.touched) ? 'red' : ''}"
                placeholder="Пароль" formControlName="password">
+        <p class="text-input-error" *ngIf="registrationForm.get('password')?.invalid
+                 && (registrationForm.get('password')?.dirty && registrationForm.get('password')?.touched)">
+          Пароль должен быть не менее 8 символов, содержать минимум 1 букву в верхнем регистре и минимум 1 цифру
+        </p>
         <div>
           <input type="checkbox" id="agree" formControlName="agree">
           <label for="agree">

@@ -9,6 +9,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import { ArticleCardComponent } from './components/article-card/article-card.component';
 import {ShortTextPipe} from "./pipes/short-text.pipe";
 import {FormatDatePipe} from "./pipes/format-date.pipe";
+import {ShortTitlePipe} from "./pipes/short-title.pipe";
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {FormatDatePipe} from "./pipes/format-date.pipe";
     FooterComponent,
     ArticleCardComponent,
     ShortTextPipe,
+    ShortTitlePipe,
     FormatDatePipe
   ],
   imports: [
@@ -28,7 +30,7 @@ import {FormatDatePipe} from "./pipes/format-date.pipe";
     ReactiveFormsModule,
     MatMenuModule,
   ],
-  exports: [LayoutComponent, HeaderComponent, FooterComponent, ArticleCardComponent, ShortTextPipe, FormatDatePipe]
+  exports: [LayoutComponent, HeaderComponent, FooterComponent, ArticleCardComponent, ShortTextPipe, FormatDatePipe, ShortTitlePipe]
 })
 export class SharedModule {
 }

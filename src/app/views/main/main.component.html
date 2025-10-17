@@ -392,12 +392,20 @@
   </select>
   <input type="text" class="modal-window-name text-input" formControlName="name"
          [ngStyle]="{'border-color': orderForm.get('name')?.invalid
-                   && (orderForm.get('name')?.dirty || orderForm.get('name')?.touched) ? 'red' : ''}"
+                   && (orderForm.get('name')?.dirty && orderForm.get('name')?.touched) ? 'red' : ''}"
          placeholder="Ваше имя">
+  <p class="text-input-error modal-window-error" *ngIf="orderForm.get('name')?.invalid
+                 && (orderForm.get('name')?.dirty && orderForm.get('name')?.touched)">
+    Введите имя
+  </p>
   <input type="text" class="modal-window-phone text-input" formControlName="phone"
          [ngStyle]="{'border-color': orderForm.get('phone')?.invalid
-                   && (orderForm.get('phone')?.dirty || orderForm.get('phone')?.touched) ? 'red' : ''}"
+                   && (orderForm.get('phone')?.dirty && orderForm.get('phone')?.touched) ? 'red' : ''}"
          placeholder="Ваш номер телефона">
+  <p class="text-input-error modal-window-error" *ngIf="orderForm.get('phone')?.invalid
+                 && (orderForm.get('phone')?.dirty && orderForm.get('phone')?.touched)">
+    Введите номер телефона
+  </p>
   <div class="modal-window-error" *ngIf="hasError">
     Произошла ошибка при отправке формы, попробуйте еще раз.
   </div>

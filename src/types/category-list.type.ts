@@ -1,6 +1,6 @@
 export type CategoryListType = {
-  "id": number,
-  "name": number,
-  "url": string,
-  "chosen"?: boolean
+  id: number,
+  name: number,
+  url: string,
+  chosen?: boolean
 }
