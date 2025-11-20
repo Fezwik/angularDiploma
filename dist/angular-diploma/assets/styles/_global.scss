@@ -1,0 +1,190 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: $darkblue-text-color;
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: $blue-text-color;
+  line-height: 130%;
+  padding: 15px 20px;
+  width: 163px;
+  height: 51px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.button-small {
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 12px;
+  width: 153px;
+  height: 36px;
+}
+
+.button-big {
+  width: 422px;
+  height: 51px;
+  cursor: pointer;
+}
+
+.text-input {
+  margin-bottom: 5px;
+  border: 2px solid $blue-text-color;
+  border-radius: 3px;
+  padding: 17px 20px;
+  width: 422px;
+  height: 53px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #a8aba7;
+  }
+}
+
+.text-input-error {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-window {
+  display: flex;
+  border: 1px solid $blue-text-color;
+  border-radius: 10px;
+  width: 727px;
+  height: 489px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  background: white;
+  top: calc(50% - 244px);
+  left: calc(50% - 363px);
+  z-index: 10;
+
+  &.modal-thx {
+    .modal-window-title {
+      max-width: 443px;
+    }
+
+    .button {
+      width: 73px;
+      height: 36px;
+      padding: 10px 20px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+      margin-top: 0;
+    }
+  }
+
+  .modal-window-title {
+    @include head-lora-38;
+    margin-bottom: 20px;
+    max-width: 406px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .modal-window-text {
+    margin-bottom: 40px;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .modal-window-service {
+    color: $blue-text-color;
+    padding: 15px 20px;
+    appearance: none;
+  }
+
+  .modal-window-error {
+    color: red;
+  }
+
+  .button {
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+.article {
+  .container {
+    .article-data {
+      .article-data-text {
+        h1 {
+          @include head-lora-38;
+          margin-bottom: 40px;
+        }
+
+        p {
+          line-height: 130%;
+          padding-bottom: 20px;
+        }
+
+        h3 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 130%;
+          color: $blue-text-color;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.mat-simple-snackbar {
+  span {
+    color: white;
+  }
+}
+
+
+.owl-carousel {
+  position: relative;
+
+    .owl-dots {
+      position: absolute;
+      bottom: 10px;
+      left: calc(50% - 35px);
+
+      .owl-dot {
+
+        &.active {
+          span {
+            background: white;
+            border: 1px solid white;
+          }
+        }
+
+        span {
+          background: transparent;
+          border: 1px solid white;
+        }
+      }
+    }
+}
+
+
